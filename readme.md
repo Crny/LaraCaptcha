@@ -1,4 +1,5 @@
 # LaraCaptcha Bundle
+LaraCaptcha is a bundle for the Laravel framework. It does not require any external dependencies and is easy to use.
 
 ## Installation
 
@@ -49,8 +50,8 @@ Next, in your view (say, **/views/layouts/register.php**), place something like:
 
 	echo Form::open('register', 'POST', array('class' => 'register_form'));
 	... [other fields] ...
-	<?php echo Form::text('captcha', '', array('class' => 'captcha', 'placeholder' => 'Insert captcha...')); ?>
-	**<img src="<?php echo LaraCaptcha\Captcha::img(); ?>" alt="" />**
+	echo Form::text('captcha', '', array('class' => 'captcha', 'placeholder' => 'Insert captcha...'));
+	<img src="<?php echo LaraCaptcha\Captcha::img(); ?>" alt="" />
 	... [other fields] ...
 	echo Form::close();
 
