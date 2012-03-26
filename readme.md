@@ -1,5 +1,5 @@
 # LaraCaptcha Bundle
-LaraCaptcha is a bundle for the Laravel framework. It does not require any external dependencies and is easy to use.
+LaraCaptcha is a captcha bundle for the Laravel framework. It does not require any external dependencies and is easy to use.
 
 ## Installation
 
