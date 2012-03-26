@@ -27,7 +27,7 @@ In **application\routes.php** place something like:
 	Route::post('register', function()
 	{
 		$rules = array(
-			'captcha' => 'laracaptcha|required'
+			'captchatest' => 'laracaptcha|required'
 		);
 		$messages = array(
 			'laracaptcha' => 'Invalid captcha',
@@ -50,8 +50,8 @@ Next, in your view (say, **/views/layouts/register.php**), place something like:
 
 	echo Form::open('register', 'POST', array('class' => 'register_form'));
 	... [other fields] ...
-	echo Form::text('captcha', '', array('class' => 'captcha', 'placeholder' => 'Insert captcha...'));
-	<img src="<?php echo LaraCaptcha\Captcha::img(); ?>" alt="" />
+	echo Form::text('captchatest', '', array('class' => 'captchainput', 'placeholder' => 'Insert captcha...'));
+	echo Form::image(LaraCaptcha\Captcha::img(), 'captcha', array('class' => 'captchaimg'));
 	... [other fields] ...
 	echo Form::close();
 
